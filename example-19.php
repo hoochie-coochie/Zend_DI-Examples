@@ -46,10 +46,10 @@ namespace {
     // Use preconfigured Doctrine\ORM\EntityManager
     $im = $di->instanceManager();
     $im->setParameters(
-        'MovieApp\DoctrineAware', array( 'em' => 'doctrine_em')
+        'MovieApp\DoctrineAwareInterface', array( 'em' => 'doctrine_em')
     );
 
-    echo get_class( $di->get('doctrine_em') ); // prints Doctrine\ORM\EntityManager
+    echo get_class( $di->get('doctrine_em') ),  PHP_EOL; // prints Doctrine\ORM\EntityManager
 
     // now let's get Doctrine consumer
     $lister = $di->get('MovieApp\Lister'); // BANG! "Invalid instantiator"
