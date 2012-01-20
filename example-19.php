@@ -11,10 +11,6 @@ namespace MovieApp {
         }
     }
     
-    class Finder {
-        public function findAllByName($name) {}
-    }
-    
     interface DoctrineAwareInterface {
         public function setEntityManager(EntityManager $em);
     }
