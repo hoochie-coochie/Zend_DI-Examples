@@ -62,7 +62,7 @@ namespace {
     $lister = $di->get('MovieApp\Lister');
     
     // expression to test
-    $works = ($lister->finder instanceof MovieApp\Finder);
+    $works = ($lister->finder instanceof MovieApp\Finder && $lister->finder->criteria == 'title');
 
     // display result
     echo (($works) ? 'It works!' : 'It DOES NOT work!');
